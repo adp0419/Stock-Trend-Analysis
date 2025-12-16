@@ -25,10 +25,16 @@ Responsibilities:
 
 import yfinance as yf
 import pandas as pd
+from datetime import datetime
 
 def fetch_stock_data(ticker, start_date = "2018-01-01", end_date = None):
+    if end_date is None:
+        end_date = datetime.today().strftime('%Y-%m-%d')
+
     stock = yf.Ticker(ticker)
+
     df = stock.history(start = start_date, end = end_date)
+
     if df.empty:
         raise ValueError(f'No data found for ticker: {ticker}')
     return df
