@@ -29,7 +29,7 @@ from datetime import datetime
 
 def fetch_stock_data(ticker, start_date = "2018-01-01", end_date = None):
     if end_date is None:
-        end_date = datetime.today().strftime('%Y-%m-%d')
+        end_date = datetime.today().strftime('%Y-%m-%d') # Sets today as default end date
 
     stock = yf.Ticker(ticker)
 
