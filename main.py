@@ -14,6 +14,7 @@ Note:
 - Controls the flow of the program; does not implement analysis logic itself.
 """
 
+from modules.fetcher import fetch_stock_data
 
 def menu():
     print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
@@ -32,7 +33,13 @@ def main():
         else:
             print(f"\nFetching data for {ticker}...\n")
             
-            # Call functions from modules
+            # ----------------------------Temporary Try/Except--------------------------------- #
+            try:
+                df = fetch_stock_data(ticker)
+                print(df.head())
+            except Exception as e:
+                print(f"Error fetching data: {e}")
+            # -------------------------------------------------------------------------------- #
 
             end_choice = input("Enter 'C' to continue to menu or 'Q' to quit\n> ").upper().strip()
 
