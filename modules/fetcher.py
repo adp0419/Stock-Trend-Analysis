@@ -37,4 +37,5 @@ def fetch_stock_data(ticker, start_date = "2018-01-01", end_date = None):
 
     if df.empty:
         raise ValueError(f'No data found for ticker: {ticker}')
+    
     return df
