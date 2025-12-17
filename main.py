@@ -15,6 +15,8 @@ Note:
 """
 
 from modules.fetcher import fetch_stock_data
+from modules.analyzer import analyze_stock
+from modules.report import format_report
 
 def menu():
     print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
@@ -32,14 +34,10 @@ def main():
             break
         else:
             print(f"\nFetching data for {ticker}...\n")
-            
-            # ----------------------------Temporary Try/Except--------------------------------- #
-            try:
-                df = fetch_stock_data(ticker)
-                print(df.head())
-            except Exception as e:
-                print(f"Error fetching data: {e}")
-            # -------------------------------------------------------------------------------- #
+
+            df = fetch_stock_data(ticker)
+            # format_report(analyze_stock(df))
+
 
             end_choice = input("Enter 'C' to continue to menu or 'Q' to quit\n> ").upper().strip()
 

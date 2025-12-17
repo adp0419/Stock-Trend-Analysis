@@ -9,3 +9,6 @@ Responsibilities:
 - Include confidence, signal strength, volatility, and risk metrics.
 - Optional: include ASCII/visual chart summaries.
 """
+
+def format_report(analysis_data):
+    pass
