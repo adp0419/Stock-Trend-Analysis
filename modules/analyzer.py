@@ -11,7 +11,7 @@ Responsibilities:
 """
 
 import pandas as pd
-from preprocessing import *
+from .preprocessing import *
 
 def analyze_stock(df): # analyze the metrics calculated in preprocessing.py; determines the trend of the stock.
     trend_basic = 0 # base trend
