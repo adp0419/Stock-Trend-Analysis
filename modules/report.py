@@ -2,7 +2,7 @@
 report.py
 ---------
 
-Functions for generating and displaying stock trend reports.
+Generates an organized stock trend report.
 
 Responsibilities:
 - Format trend analysis data into readable terminal reports.

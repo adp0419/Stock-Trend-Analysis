@@ -2,7 +2,7 @@
 fetcher.py
 -----------
 
-Functions for fetching historical stock data from Yahoo Finance.
+Fetches historical stock data from Yahoo Finance.
 
 Responsibilities:
 - Connect to Yahoo Finance using yfinance.
@@ -10,18 +10,6 @@ Responsibilities:
 - Return data in a format ready for preprocessing and analysis.
 """
 
-"""
-preprocessing.py
-----------------
-
-Functions for preparing stock data for analysis.
-
-Responsibilities:
-- Compute moving averages (short, mid, long-term).
-- Calculate volatility metrics.
-- Compute drawdowns and normalize features.
-- Provide preprocessed data to the analyzer module.
-"""
 
 import yfinance as yf
 import pandas as pd

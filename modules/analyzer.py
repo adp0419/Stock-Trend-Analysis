@@ -2,7 +2,7 @@
 analyzer.py
 -----------
 
-Functions to analyze stock trends.
+Analyze stock trends given the data collected.
 
 Responsibilities:
 - Determine short-, mid-, and long-term trend directions.
