@@ -2,7 +2,7 @@
 preprocessing.py
 ----------------
 
-Functions for preparing stock data for analysis.
+Preparing stock data for analysis.
 
 Responsibilities:
 - Compute moving averages (short, mid, long-term).
