@@ -15,6 +15,7 @@ from modules.fetcher import *
 from modules.preprocessing import *
 from modules.analyzer import *
 from modules.report import *
+from modules.visualizer import *
 
 def menu():
     print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
@@ -38,6 +39,7 @@ def main():
             df = preprocess_data(df)
             analysis = analyze_stock(df)
             format_report(ticker, df, analysis)
+            plot_moving_averages(df, ticker)
 
             end_choice = input("Enter 'C' to continue to menu or 'Q' to quit\n> ").upper().strip()
 
