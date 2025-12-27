@@ -61,7 +61,7 @@ def format_report(ticker, df, analysis):
     print("DISCLAIMER")
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
     print("This tool provides probabilistic trend insights based on historical data.")
-    print("It does NOT predict exact stock prices and should not be used as financial advice.")
+    print("It does NOT predict exact stock prices and should not be used as financial advice.\n")
 
 
     

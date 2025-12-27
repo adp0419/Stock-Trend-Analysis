@@ -40,3 +40,21 @@ def plot_volatility(df, ticker):
 
     plt.tight_layout() 
     plt.show()
+
+def plot_volume(df, ticker):
+    plt.figure(figsize=(12,6))
+
+    colors = ['green' if df['Close'].iloc[i] >= df['Close'].iloc[i-1] else 'red' for i in range(1, len(df))]
+    plt.bar(df.index[1:], df['Volume'][1:], color=colors, alpha=0.6)
+
+    plt.title(f"{ticker} Trading Volume")
+    plt.xlabel("Date")
+    plt.ylabel("Volume")
+
+    plt.tight_layout()
+    plt.show()
+
+def display_charts(df, ticker):
+    plot_moving_averages(df, ticker)
+    plot_volatility(df, ticker)
+    plot_volume(df, ticker)
