@@ -42,7 +42,7 @@ def format_report(ticker, df, analysis):
 
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print("INTERPRETATION")
-    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
 
     if analysis['Confidence'] >= 70:
         print("• Strong agreement based on indicators.")
@@ -55,11 +55,11 @@ def format_report(ticker, df, analysis):
         print("• High volatility reflects a higher risk.")
 
     if analysis['Drawdown'] < -0.1:
-        print("• Recent drawdown indicates downside pressure.")
+        print("• Recent drawdown indicates downside pressure.\n")
 
-    print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print("DISCLAIMER")
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("DISCLAIMER")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
     print("This tool provides probabilistic trend insights based on historical data.")
     print("It does NOT predict exact stock prices and should not be used as financial advice.")
 

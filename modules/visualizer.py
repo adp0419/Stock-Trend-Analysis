@@ -25,3 +25,18 @@ def plot_moving_averages(df, ticker):
 
     plt.tight_layout()
     plt.show()
+
+def plot_volatility(df, ticker):
+    plt.figure(figsize=(12, 6))
+
+    plt.plot(df.index, df['Close'], label='Closing Price', linewidth=2, color='black')
+    plt.fill_between(df.index, df['Close'] - df['Volatility'], df['Close'] + df['Volatility'], color='red', alpha=0.2)
+
+    plt.title(f'{ticker} Closing Price with Volatility')
+    plt.xlabel("Date")
+    plt.ylabel("Price")
+    plt.legend()
+    plt.grid(True)
+
+    plt.tight_layout() 
+    plt.show()

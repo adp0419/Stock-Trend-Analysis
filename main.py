@@ -40,6 +40,7 @@ def main():
             analysis = analyze_stock(df)
             format_report(ticker, df, analysis)
             plot_moving_averages(df, ticker)
+            plot_volatility(df, ticker)
 
             end_choice = input("Enter 'C' to continue to menu or 'Q' to quit\n> ").upper().strip()
 
