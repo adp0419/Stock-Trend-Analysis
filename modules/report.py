@@ -55,9 +55,9 @@ def format_report(ticker, df, analysis):
         print("• High volatility reflects a higher risk.")
 
     if analysis['Drawdown'] < -0.1:
-        print("• Recent drawdown indicates downside pressure.\n")
+        print("• Recent drawdown indicates downside pressure.")
 
-    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print("DISCLAIMER")
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
     print("This tool provides probabilistic trend insights based on historical data.")
